@@ -30,6 +30,10 @@ public class Main {
         //4. Close
         Main m = new Main();
         Connection con = m.get_Db_Connection();
+
+        Database_Read dr = new Database_Read(con);
+        dr.read();
+
         try {
             con.close();
         } catch (Exception e){
